@@ -1,0 +1,810 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\DRMBuilder.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\DRMBuilder.ico"
+IDR_DRMBuilderTYPE      ICON                    "res\\DRMBuilderDoc.ico"
+IDI_ICON_CCSI           ICON                    "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_EXPORT_DRM
+    SEPARATOR
+    BUTTON      ID_SETUP_CHOOSE_ACM
+    BUTTON      ID_CHOOSEHIGH_ACMSNAPSHOTFILE
+    BUTTON      ID_SETUP_CHOOSE_DML
+    BUTTON      ID_SETUP_INPUTVARIABLES
+    BUTTON      ID_SETUP_OUTPUTVARIABLES
+    BUTTON      ID_SETUP_PREPARE_TRAINING_SEQUENCE
+    BUTTON      ID_SETUP_PREPARE_VALIDATION_SEQUENCE
+    SEPARATOR
+    BUTTON      ID_BUILD_LAUNCH_TRAINING_SIMULATION
+    BUTTON      ID_BUILD_LAUNCH_VALIDATION_SIMULATION
+    BUTTON      ID_BUILD_GENERATE_REDUCED_MODEL
+    SEPARATOR
+    BUTTON      ID_POSTPROCESS_PREDICT_TRAINING
+    BUTTON      ID_POSTPROCESS_PREDICT_VALIDATION
+    BUTTON      ID_POSTPROCESS_COMPARE_TRAINING
+    BUTTON      ID_POSTPROCESS_COMPARE_VALIDATION
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_CONTEXT_HELP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DRMBuilder...",        ID_APP_ABOUT
+    END
+END
+
+IDR_DRMBuilderTYPE MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        POPUP "&Export"
+        BEGIN
+            MENUITEM "&ACM File...",                ID_FILE_EXPORTACMFILE
+            MENUITEM "ACM S&napshot File...",       ID_FILE_EXPORTACMSNAPSHOTFILE
+            MENUITEM "&Simulink File...",           ID_FILE_EXPORTSIMULINKFILE
+            MENUITEM "&Training Data...",           ID_FILE_EXPORTTRAININGDATA
+            MENUITEM "&Validation Data",            ID_FILE_EXPORTVALIDATIONDATA
+            MENUITEM "&Covariance Matrices...",     ID_EXPORT_COVARIANCEMATRICES
+            MENUITEM "&D-RM As Matlab Script File...", ID_FILE_EXPORT_DRM
+            MENUITEM "&Log File...",                ID_FILE_EXPORT_LOG
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Scroll To &Bottom",           ID_VIEW_SCROLLTOBOTTOM
+    END
+    POPUP "&Setup"
+    BEGIN
+        POPUP "Choose &High-Fidelity Model"
+        BEGIN
+            MENUITEM "&Aspen Custom Modeler File...", ID_SETUP_CHOOSE_ACM
+            MENUITEM "ACM &Snap Shot File...",      ID_CHOOSEHIGH_ACMSNAPSHOTFILE
+            MENUITEM "&MATLAB/Simulink File...",    ID_SETUP_CHOOSE_DML
+        END
+        MENUITEM "Configure &Input Variables...", ID_SETUP_INPUTVARIABLES
+        MENUITEM "Configure &Output Variables...", ID_SETUP_OUTPUTVARIABLES
+        MENUITEM "Prepare &Training Sequence...", ID_SETUP_PREPARE_TRAINING_SEQUENCE
+        MENUITEM "Prepare &Validation Sequence...", ID_SETUP_PREPARE_VALIDATION_SEQUENCE
+    END
+    POPUP "&Build"
+    BEGIN
+        MENUITEM "Perform &Training Simulation", ID_BUILD_LAUNCH_TRAINING_SIMULATION
+        MENUITEM "Perform &Validation Simulation", ID_BUILD_LAUNCH_VALIDATION_SIMULATION
+        MENUITEM SEPARATOR
+        POPUP "D-RM &Model Type"
+        BEGIN
+            MENUITEM "&DABNet",                     ID_D_DABNET
+            MENUITEM "&NARMA",                      ID_D_NARMA
+        END
+        MENUITEM "&Generate Reduced Model...",  ID_BUILD_GENERATE_REDUCED_MODEL
+    END
+    POPUP "&Post-Process"
+    BEGIN
+        MENUITEM "&Use Balanced Model for Prediction", ID_POSTPROCESS_USEBALANCEDMODEL
+        MENUITEM "Use &High-Fidelity Model History For Prediction", ID_POSTPROCESS_USEHIGHFIDELITYHISTORY
+        MENUITEM SEPARATOR
+        MENUITEM "Predict &Training Response",  ID_POSTPROCESS_PREDICT_TRAINING
+        MENUITEM "Predict &Validation Response", ID_POSTPROCESS_PREDICT_VALIDATION
+        MENUITEM SEPARATOR
+        MENUITEM "Plot/Compare T&raining Responses...", ID_POSTPROCESS_COMPARE_TRAINING
+        MENUITEM "Plot/Compare V&alidation Responses...", ID_POSTPROCESS_COMPARE_VALIDATION
+    END
+    POPUP "&UQ"
+    BEGIN
+        MENUITEM "Set &Noise...",               ID_UQ_SETNOISE
+        MENUITEM "&Calculate...",               ID_UQ_CALCULATE
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DRMBuilder...",        ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT
+    VK_F1,          ID_HELP,                VIRTKEY 
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 184, 69
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About DRMBuilder"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "D-RMBuilder, Version 2.0",IDC_STATIC,43,7,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) CCSI, US DOE 2013-2014",IDC_STATIC,43,23,132,8
+    DEFPUSHBUTTON   "OK",IDOK,127,48,50,14,WS_GROUP
+    ICON            IDI_ICON_CCSI,IDC_STATIC,7,7,20,20
+END
+
+IDD_DIALOG_INPUT_VARIABLE DIALOGEX 0, 0, 335, 218
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Input Variable Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_INPUT,7,19,141,105,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_TIME_SAMPLE,91,150,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DESC,227,56,81,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LOWER_LIMIT,227,92,81,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_UPPER_LIMIT,227,110,81,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RAMP_RATE,227,128,36,14,ES_AUTOHSCROLL
+    CONTROL         "Use Ramp To Replace Step Change",IDC_CHECK_RAMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,184,151,129,10
+    CONTROL         "Varies With Time",IDC_CHECK_VARIED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,184,169,97,10
+    EDITTEXT        IDC_EDIT_DEFAULT,227,74,81,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_NX,122,129,26,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_NAME,227,20,81,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_UNIT,227,38,81,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Cancel",IDCANCEL,7,197,50,14
+    PUSHBUTTON      "OK",IDOK,278,197,50,14
+    DEFPUSHBUTTON   "DFB",IDC_BUTTON_DEFAULT,151,49,21,14,NOT WS_VISIBLE
+    GROUPBOX        "For Selected Input Variable",IDC_STATIC,175,7,153,178
+    LTEXT           "Input Variable List",IDC_STATIC,7,7,58,8
+    LTEXT           "Steady State",IDC_STATIC,184,77,43,8
+    LTEXT           "Lower Limit",IDC_STATIC,184,95,36,8
+    LTEXT           "Upper Limit",IDC_STATIC,184,113,36,8
+    LTEXT           "Name",IDC_STATIC,184,23,19,8
+    LTEXT           "Description",IDC_STATIC,184,59,36,8
+    LTEXT           "Number of Time Dependent Inputs",IDC_STATIC,7,131,115,8
+    LTEXT           "Unit",IDC_STATIC,184,41,14,8
+    LTEXT           "Ramp Rate",IDC_STATIC,184,131,36,8
+    LTEXT           "Rate Unit",IDC_STATIC_RAMP_RATE,266,131,60,8
+    EDITTEXT        IDC_EDIT_TIME_MIN_SOLVER,91,171,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Sampling Time Interval",IDC_STATIC,7,152,81,8
+    LTEXT           "Solver Minimum Time Step",IDC_STATIC,7,173,83,8
+    LTEXT           "Static",IDC_STATIC_TIME_SAMPLE,135,152,31,11
+    LTEXT           "Static",IDC_STATIC_TIME_MIN_SOLVER,135,173,31,11
+END
+
+IDD_DIALOG_OUTPUT_VARIABLE DIALOGEX 0, 0, 327, 164
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Output Variable Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_OUTPUT,7,19,145,114,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_DESC,231,58,81,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "DFB",IDC_BUTTON_DEFAULT,238,143,23,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,175,143,50,14
+    PUSHBUTTON      "OK",IDOK,270,143,50,14
+    GROUPBOX        "For Selected Output Variable",-1,175,7,145,89
+    CONTROL         "Included in DRM",IDC_CHECK_VARIED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,231,79,67,10
+    EDITTEXT        IDC_EDIT_NX,129,143,23,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_NAME,231,20,81,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Output Variable List",-1,7,7,64,8
+    LTEXT           "Name",-1,184,24,19,8
+    LTEXT           "Description",-1,184,60,36,8
+    LTEXT           "Number of Time Dependent Outputs",-1,7,146,122,8
+    EDITTEXT        IDC_EDIT_UNIT1,231,39,81,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Unit",-1,184,42,14,8
+END
+
+IDD_DIALOG_MODEL_PARAMETER DIALOGEX 0, 0, 432, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DABNet DRM Parameter Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_OUTPUT,7,17,98,58,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_INPUT,117,17,98,58,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "For Each Output Variable",IDC_STATIC,7,86,207,58
+    CONTROL         "Use Specified Pole Value",IDC_RADIO_USER,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,115,93,10
+    CONTROL         "Optimize Pole Value",IDC_RADIO_OPTIMIZED,"Button",BS_AUTORADIOBUTTON,15,129,78,10
+    EDITTEXT        IDC_EDIT_NNEURON_HID,137,99,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NORDER,137,165,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_POLE,137,182,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "Training Method For Laguerre Model Neural Network",IDC_STATIC,240,7,185,47
+    CONTROL         "Back Propagation",IDC_RADIO_BP_LAG,"Button",BS_AUTORADIOBUTTON | WS_GROUP,243,22,71,10
+    CONTROL         "IPOPT",IDC_RADIO_IPOPT_LAG,"Button",BS_AUTORADIOBUTTON,374,22,36,10
+    EDITTEXT        IDC_EDIT_NMAX_ITER_LAG,376,35,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "Training Method For Balanced Model Neural Network",IDC_STATIC,240,70,185,47
+    CONTROL         "Back Propagation",IDC_RADIO_BP_RED,"Button",BS_AUTORADIOBUTTON | WS_GROUP,243,85,71,10
+    CONTROL         "IPOPT",IDC_RADIO_IPOPT_RED,"Button",BS_AUTORADIOBUTTON,375,85,36,10
+    EDITTEXT        IDC_EDIT_NMAX_ITER_RED,376,98,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_WEIGHT_INIT,376,131,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "DFB",IDC_BUTTON_DEFAULT,313,189,22,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,243,189,50,14
+    PUSHBUTTON      "OK",IDOK,375,189,50,14
+    LTEXT           "Number of Neurons in Hidden Layer",IDC_STATIC,15,100,117,8
+    LTEXT           "Number of Laguerre States",IDC_STATIC,15,168,119,8
+    GROUPBOX        "For Each Input/Output Variable Pair",IDC_STATIC,7,153,207,50
+    LTEXT           "Estimated Pole Value",IDC_STATIC,15,184,109,8
+    LTEXT           "Input Variable List",IDC_STATIC,117,7,69,8
+    LTEXT           "Maximum Number of Training Iterations",IDC_STATIC,243,38,131,8
+    LTEXT           "Initial Weight of ANN Connections",IDC_STATIC,243,134,118,8
+    LTEXT           "Output Variable List",IDC_STATIC,7,7,64,8
+    LTEXT           "Maximum Number of Training Iterations",IDC_STATIC,243,101,132,8
+    PUSHBUTTON      "Reset To Default Options and Parameters",IDC_BUTTON_USE_DEFAULT,247,160,178,14
+END
+
+IDD_DIALOG_MODEL_PARAMETER_NARMA DIALOGEX 0, 0, 176, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NARMA DRM Parameter Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_NHISTORY,129,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NNEURON_HID,129,28,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NMAX_ITER_BP,129,49,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "DFB",IDC_BUTTON_DEFAULT,75,97,22,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,7,97,50,14
+    PUSHBUTTON      "OK",IDOK,119,97,50,14
+    LTEXT           "Number of Neurons in Hidden Layer",-1,7,31,120,8
+    LTEXT           "Number of Discrete History Data",-1,7,9,119,8
+    LTEXT           "Maximum Number of BP Iterations",-1,7,52,116,8
+    PUSHBUTTON      "Reset To Default Parameters",IDC_BUTTON_RESET,7,73,162,14
+END
+
+IDD_DIALOG_PLOT_RESULT DIALOGEX 0, 0, 217, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Result Plotting Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_INPUT,7,17,92,67,LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Cancel",IDCANCEL,7,189,50,14
+    PUSHBUTTON      "OK",IDOK,160,189,50,14
+    LISTBOX         IDC_LIST_OUTPUT,118,17,92,67,LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "Select Input Variables",IDC_STATIC,7,7,81,8
+    LTEXT           "Select Output Variables",IDC_STATIC,118,7,92,8
+    PUSHBUTTON      "Select All Inputs",IDC_BUTTON_SELECT_ALL_IN,7,91,92,14
+    PUSHBUTTON      "Select All Outputs",IDC_BUTTON_SELECT_ALL_OUT,118,91,92,14
+    PUSHBUTTON      "Deselect All Inputs",IDC_BUTTON_DESELECT_ALL_IN,7,112,92,14
+    PUSHBUTTON      "Deselect All Outputs",IDC_BUTTON_DESELECT_ALL_OUT,118,112,92,14
+    LTEXT           "* indicates an input or output varied in the reduced model",IDC_STATIC,7,131,186,8
+    CONTROL         "Plot Relative Errors",IDC_CHECK_ERROR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,144,77,10
+    CONTROL         "Plot Input Step Changes",IDC_CHECK_STEP_CHANGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,159,94,10
+    CONTROL         "Plot Correlation Points",IDC_CHECK_CORRELATION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,174,87,10
+END
+
+IDD_DIALOG_ACM_PATHNAME DIALOGEX 0, 0, 236, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ACM File Selection Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,179,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,7,42,50,14
+    LTEXT           "Path Name of ACM File Linked to Simulink File",IDC_STATIC,7,7,144,8
+    EDITTEXT        IDC_EDIT_PATHNAME,7,18,168,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BUTTON_BROWSE,179,18,50,14
+END
+
+IDD_DIALOG_SOLVER_INPUT DIALOGEX 0, 0, 280, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_NPOINT,93,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NDURATION,93,58,40,14,ES_AUTOHSCROLL
+    CONTROL         "Include Reverse Step Changes",IDC_CHECK_IREVERSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,81,115,10
+    LISTBOX         IDC_LIST_DURATION,181,19,82,46,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_NDT,181,94,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DT,93,7,40,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Cancel",IDCANCEL,7,127,50,14
+    DEFPUSHBUTTON   "DFB",IDC_BUTTON_DEFAULT,120,127,28,14,NOT WS_VISIBLE
+    PUSHBUTTON      "OK",IDOK,223,127,50,14
+    LTEXT           "Sampling Time Interval",IDC_STATIC,7,9,73,8
+    LTEXT           "Number of LHS Sets",IDC_STATIC,7,60,79,8
+    LTEXT           "Number of LHS Points",IDC_STATIC,7,43,83,8
+    LTEXT           "Duration of Step Change",IDC_STATIC,181,73,80,8
+    GROUPBOX        "For Each LHS Set",IDC_STATIC,171,7,102,107
+    LTEXT           "(Number of Time Intervals)",IDC_STATIC,181,83,92,8
+    LTEXT           "hour",IDC_STATIC_TIME,136,9,32,8
+    LTEXT           "Solver Minimum Time Step",IDC_STATIC,7,26,83,8
+    EDITTEXT        IDC_EDIT_DT_MIN_SOLVER,93,24,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "hour",IDC_STATIC_TIME_MIN,135,26,32,8
+END
+
+IDD_DIALOG_NOISE DIALOGEX 0, 0, 245, 178
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Process and Measurement Uncertainty Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_FQ_STATE,123,20,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NOUTPUT,123,65,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LISTBOX         IDC_LIST_OUTPUT,14,94,149,50,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_FR_OUTPUT,123,152,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDCANCEL,188,127,50,14
+    DEFPUSHBUTTON   "DFB",IDC_BUTTON_DEFAULT,210,7,28,14,NOT WS_VISIBLE
+    PUSHBUTTON      "OK",IDOK,188,157,50,14
+    LTEXT           "Number of Output Variables",IDC_STATIC,14,67,90,8
+    LTEXT           "Standard Deviation/Initial Output",IDC_STATIC,14,154,107,8
+    LTEXT           "Standard Deviation/Initial State",IDC_STATIC,14,22,106,8
+    GROUPBOX        "Process Noise of State Variables",IDC_STATIC,7,7,163,33
+    GROUPBOX        "Measurement Noise of Output Variables",IDC_STATIC,7,52,163,119
+    LTEXT           "Output List",IDC_STATIC,14,84,36,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "CCSI"
+            VALUE "FileDescription", "Dynamic Reduced Model Builder"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "DRMBuilder.exe"
+            VALUE "LegalCopyright", "(c) U.S. Departement of Energy.  All rights reserved."
+            VALUE "OriginalFilename", "DRMBuilder.exe"
+            VALUE "ProductName", "D-RM Builder"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+
+    IDD_DIALOG_INPUT_VARIABLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 328
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_DIALOG_OUTPUT_VARIABLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_DIALOG_MODEL_PARAMETER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 425
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_DIALOG_MODEL_PARAMETER_NARMA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 169
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_DIALOG_PLOT_RESULT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_DIALOG_ACM_PATHNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_DIALOG_SOLVER_INPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_DIALOG_NOISE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Dynamic Reduced Model Builder"
+    IDR_DRMBuilderTYPE      "\nDRMBuilder\nDRMBuilder\nDRMBuilder Files (*.drm)\n.drm\nDRMBuilder.Document\nDRMBuilder.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "DRMBuilder"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_BUILD_GENERATE_REDUCED_MODEL 
+                            "Generate dynamic reduced model\nGenerate D-RM"
+    ID_SETUP_CHOOSE_ACM     "Choose an Aspen Custom Modeler case file\nChoose ACM Model"
+    ID_BUILD_LAUNCH_TRAINING_SIMULATION 
+                            "Start high-fidelity model simulation for training\nPerform Training Simulation"
+    ID_BUILD_LAUNCH_VALIDATION_SIMULATION 
+                            "Start high-fidelity model simulation for validation\nPerform Validation Simulation"
+    ID_SETUP_CHOOSE_DML     "Choose a MATLAB/Simulink file with embeded ACM model\nChoose Simulink File"
+END
+
+STRINGTABLE
+BEGIN
+    ID_SETUP_OUTPUTVARIABLES 
+                            "Configure output variables\nConfigure Output Variables"
+    ID_SETUP_INPUTVARIABLES "Configure input variables\nConfigure Input Variables"
+    ID_SETUP_PREPARE_TRAINING_SEQUENCE 
+                            "Prepare a step change sequence for training\nPrepare Training Sequence"
+    ID_SETUP_PREPARE_VALIDATION_SEQUENCE 
+                            "Prepare a step change sequence for validation\nPrepare Validation Sequence"
+END
+
+STRINGTABLE
+BEGIN
+    ID_POSTPROCESS_PREDICT_TRAINING 
+                            "Predict training response using D-RM\nPredict Training Response"
+    ID_POSTPROCESS_PREDICT_VALIDATION 
+                            "Predict validation response using D-RM\nPredict Validation Response"
+    ID_POSTPROCESS_COMPARE_TRAINING 
+                            "Plot and compare training responses calculated by D-RM and high-fidelity models\nPlot Training Responses"
+    ID_POSTPROCESS_COMPARE_VALIDATION 
+                            "Plot and compare validation responses calculated by D-RM and high-fidelity models\nPlot Validation Responses"
+    ID_FILE_EXPORT_DRM      "Export generated dynamic reduced model to a MATLAB .m file\nExport D-RM"
+    ID_POSTPROCESS_USEBALANCEDMODEL 
+                            "Select balanced DABNet model for prediction and exporting if checked, otherwise select unbalanced model\nUse Balanced Model"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_EXPORTLAGUERREWEIGHTMATRICES 
+                            "Export weight matrices obtained from Laguerre model used for balanced reduction\nExport Weight Matrices"
+    ID_D_DABNET             "Select DABNet as D-RM type\nSelect DABNet Model"
+    ID_D_NARMA              "Select NARMA as D-RM type\nSelect NARMA Model"
+    ID_CHOOSEHIGH_ACMSNAPSHOTFILE 
+                            "Choose an ACM snap shot file\nChoose ACM Snap Shot"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\DRMBuilder.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
