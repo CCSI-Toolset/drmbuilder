@@ -1,5 +1,5 @@
 # DRMBuilder
-Generates a Matlab-based reduced model of the behavior of a dynamic system 
+Generates data-driven dynamce reduced models from a high-fidelity dynamic model or from sampled transient data from an existing plant.
 
 ## Getting Started
 See installation and user guide documents in the [documentation](docs) subdirectory.
