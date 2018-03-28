@@ -1,10 +1,10 @@
 //Dabnet.cpp
 #include <math.h>
 #include "Dabnet.h"
-#include "IpIpoptApplication.hpp"
-#include "AnnIpopt.h"
+//#include "IpIpoptApplication.hpp"
+//#include "AnnIpopt.h"
 
-using namespace Ipopt;
+//using namespace Ipopt;
 
 CDabnet::CDabnet(void)
 {
@@ -192,6 +192,7 @@ void CDabnet::TrainLaguerreNeuralNetworkByBackPropagation()
 
 void CDabnet::TrainLaguerreNeuralNetworkByIpopt()
 {
+	/*
 	int nhidden_layer = 1;		//use just one hidden layer
 	int pnneuron_hid[1];
 	pnneuron_hid[0] = nneuron_hid;
@@ -226,15 +227,16 @@ void CDabnet::TrainLaguerreNeuralNetworkByIpopt()
 	status = app->OptimizeTNLP(mynlp);
 	//if (status != Solve_Succeeded)
 	//	printf("IPOPT failed to reach tolerance of 0.00001.\n");
+	*/
 }
 
 void CDabnet::TrainLaguerreNeuralNetwork()
 {
 	if (ilinear_ann)	//default type is 2
 		ann_lag.SetHiddenLayerActivationType(0);
-	if (pdabnet_input->itrain_lag_opt)
-		TrainLaguerreNeuralNetworkByIpopt();
-	else
+	//if (pdabnet_input->itrain_lag_opt)
+	//	TrainLaguerreNeuralNetworkByIpopt();
+	//else
 		TrainLaguerreNeuralNetworkByBackPropagation();
 }
 
@@ -260,6 +262,7 @@ void CDabnet::TrainReducedModelNeuralNetworkByBackPropagation()
 
 void CDabnet::TrainReducedModelNeuralNetworkByIpopt()
 {
+	/*
 	int nhidden_layer = 1;		//use just one hidden layer
 	int pnneuron_hid[1];
 	pnneuron_hid[0] = nneuron_hid;
@@ -294,15 +297,16 @@ void CDabnet::TrainReducedModelNeuralNetworkByIpopt()
 	status = app->OptimizeTNLP(mynlp);
 	if (status != Solve_Succeeded)
 		printf("not solved");
+	*/
 }
 
 void CDabnet::TrainReducedModelNeuralNetwork()
 {
 	if (ilinear_ann)	//default type is 2
 		ann_red.SetHiddenLayerActivationType(0);
-	if (pdabnet_input->itrain_red_opt)
-		TrainReducedModelNeuralNetworkByIpopt();
-	else
+	//if (pdabnet_input->itrain_red_opt)
+	//	TrainReducedModelNeuralNetworkByIpopt();
+	//else
 		TrainReducedModelNeuralNetworkByBackPropagation();
 }
 
