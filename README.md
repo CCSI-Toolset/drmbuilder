@@ -1,4 +1,4 @@
-# DRMBuilder
+# D-RM Builder
 Generates data-driven dynamce reduced models from a high-fidelity dynamic model or from sampled transient data from an existing plant.
 
 ## Getting Started

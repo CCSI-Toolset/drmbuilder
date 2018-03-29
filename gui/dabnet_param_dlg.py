@@ -63,12 +63,14 @@ class DABNetParamDlg(QDialog, Ui_dabnetParamDlg):
         else:
             self.radioButton_LaguerreIPOPT.setChecked(True)
             self.lineEdit_LaguerreMaxIterations.setText(str(self.dabnet_input.nmax_iter_ipopt_lag))
+        self.radioButton_LaguerreIPOPT.setEnabled(False)
         if self.dabnet_input.itrain_red_opt==0:
             self.radioButton_BalancedBP.setChecked(True)
             self.lineEdit_BalancedMaxIterations.setText(str(self.dabnet_input.nmax_iter_bp_red))
         else:
             self.radioButton_BalancedIPOPT.setChecked(True)
             self.lineEdit_BalancedMaxIterations.setText(str(self.dabnet_input.nmax_iter_ipopt_red))
+        self.radioButton_BalancedIPOPT.setEnabled(False)
         self.lineEdit_InitialWeight.setText(str(self.dabnet_input.weight_init))
         # validators
         self.validator_NumberOfNeurons = CCSIIntValidator(1, 50, self.label_NumberOfNeurons.text())
